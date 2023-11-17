@@ -237,12 +237,19 @@ template {
 }
 
 /*main style*/
+* {
+    border: 0;
+}
+
 html {
     font-size: 10px;
     overflow-x: hidden;
 }
 
 body {
+    width: 100%;
+    height: 100%;
+    line-height: 1;
     font-family: "Ubuntu", sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
@@ -260,12 +267,18 @@ body {
     box-sizing: border-box;
 }
 
+nav, footer, header, aside {
+    display: block;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    font-size: inherit;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -273,7 +286,36 @@ p {
     margin: 0;
 }
 
+img {
+    vertical-align: top;
+}
+
+input {
+    font-family: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+textarea {
+    font-family: inherit;
+}
+
+:focus {
+    outline: none;
+}
+
+:active {
+    outline: none;
+}
+
 a:focus {
+    outline: none;
+}
+
+a:active {
     outline: none;
 }
 
