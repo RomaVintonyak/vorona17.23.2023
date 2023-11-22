@@ -1,5 +1,5 @@
 /*google foonts*/
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap");
 /*==================*/
 /*normalize css https://necolas.github.io/normalize.css/ */
 html {
@@ -247,14 +247,12 @@ html {
 }
 
 body {
-    width: 100%;
-    height: 100%;
     line-height: 1;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    color: #000000;
+    color: #171717;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -294,9 +292,18 @@ input {
     font-family: inherit;
 }
 
+input::-ms-clear {
+    display: none;
+}
+
 button {
     font-family: inherit;
     cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
 }
 
 textarea {
@@ -364,14 +371,10 @@ a:active {
 /*test block*/
 .header {
     width: 100%;
-    height: 8vh;
-    background-color: rgba(8, 68, 231, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 10vh;
 }
 
-.nav__menu {
+.header .header__row {
     width: 100%;
     height: 100%;
     display: flex;
@@ -379,70 +382,71 @@ a:active {
     align-items: center;
 }
 
-.nav__menu--main {
-    list-style-type: none;
-    width: 50%;
-    height: 100%;
-    display: flex;
+.header .header__row--brand {
+    width: 10%;
 }
 
-.nav__menu--main li {
-    margin-right: 2rem;
-    position: relative;
-}
-
-.nav__menu--main li:last-child {
-    margin-right: 0;
-}
-
-.nav__menu--main li::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    bottom: -0.4rem;
-    left: 0;
-    transition: 0.3s ease-in-out;
-}
-
-.nav__menu--main li:hover::after {
-    width: 100%;
-}
-
-.nav__menu--main li a {
+.header .header__row--brand a {
+    display: block;
     text-decoration: none;
-    font-size: 2rem;
-    color: black;
+}
+
+.header .header__row--menu {
+    width: 60%;
+}
+
+.header .header__row--buttons {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .header__row--buttons a {
+    display: block;
+    padding: 0.8rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.header .header__row--buttons a i {
+    color: #8b8b8b;
+    transition: color 0.2s ease;
+}
+
+.header .header__row--buttons a:hover {
+    background-color: #f8f8f8;
+}
+
+.header .header__row--buttons a:hover i {
+    color: #171717;
+}
+
+.nav__menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__menu--link {
+    display: block;
+    padding: 0.8rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+    color: #8b8b8b;
+    line-height: 1.917;
+    text-transform: uppercase;
     font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
 }
 
-.nav__menu--social {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    list-style-type: none;
-    justify-content: end;
+.nav__menu--link:hover {
+    background-color: #f8f8f8;
+    color: #171717;
 }
 
-.nav__menu--social li {
-    margin-left: 2rem;
-}
-
-.nav__menu--social li:first-child {
-    margin-left: 0;
-}
-
-.nav__menu--social li a {
-    text-decoration: none;
-}
-
-.nav__menu--social li a i {
-    color: red;
-    font-size: 2rem;
-    transition: color, linear, 0.3s;
-}
-
-.nav__menu--social li:hover a i {
-    color: black;
-}
+/*burger*/

@@ -1,5 +1,5 @@
 /*google foonts*/
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
 /*==================*/
 /*normalize css https://necolas.github.io/normalize.css/ */
 @import "vendor/normalize.scss";
@@ -13,20 +13,15 @@
 *{
   border: 0;
 }
-
-
 html{
   font-size: 10px;
   overflow-x: hidden;
 }
 body{
-  width: 100%;
-  height: 100%;
   line-height: 1;
-
   font-family: $font;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   color: $black;
   margin: 0;
@@ -39,14 +34,11 @@ body{
 *::after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  
   box-sizing: border-box;
 }
-
 nav,footer,header,aside{
   display: block;
 }
-
 h1,
 h2,
 h3,
@@ -60,17 +52,22 @@ h6 {
 p {
   margin: 0;
 }
-
 img{
   vertical-align: top;
 }
-
 input{
   font-family: inherit;
+  &::-ms-clear{
+    display: none;
+  }
 }
 button{
   font-family: inherit;
   cursor: pointer;
+  &::-moz-focus-inner{
+    padding: 0;
+    border: 0;
+  }
 }
 textarea{
   font-family: inherit;
@@ -81,7 +78,6 @@ textarea{
 :active{
   outline: none;
 }
-
 a {
   &:focus {
     outline: none;
@@ -95,3 +91,5 @@ a {
 @import "block/container.scss";
 /*header*/
 @import "block/header.scss";
+/*burger*/
+@import "block/burger.scss";
