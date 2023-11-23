@@ -398,7 +398,7 @@ a:active {
 .header .header__row--buttons {
     width: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .header .header__row--buttons a {
@@ -450,3 +450,55 @@ a:active {
 }
 
 /*burger*/
+.burger__btn {
+    display: none;
+    visibility: hidden;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    transition: background-color 0.2s linear;
+}
+
+.burger__btn span {
+    display: block;
+    height: 0.1rem;
+    width: 2.6rem;
+    background-color: #8b8b8b;
+    position: absolute;
+    left: 0.3rem;
+    top: calc(50% - 0.1rem);
+    transition: background-color 0.2s linear, width 0.1s linear, transform 0.2s linear;
+}
+
+.burger__btn span:first-child {
+    top: calc(25% - 0.1rem);
+}
+
+.burger__btn span:last-child {
+    top: calc(75% - 0.1rem);
+}
+
+.burger__btn:hover {
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+
+.burger__btn:hover span {
+    background-color: #171717;
+}
+
+.burger__btn--active span:first-child {
+    width: 0;
+}
+
+.burger__btn--active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.burger__btn--active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.burger__btn--active span:last-child {
+    width: 0;
+}

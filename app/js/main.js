@@ -1,9 +1,9 @@
 jQuery(document).ready(function () {
   "use script";
- 
-  var btn = $("._callback");
-  btn.on("click", function(){
-    alert("Its work");
-    prompt();
+  /*Burger BTN*/
+  var burger_btn = $(".burger__btn");
+  burger_btn.on("click", function(){
+    $(this).toggleClass("burger__btn--active");
   });
+
 });

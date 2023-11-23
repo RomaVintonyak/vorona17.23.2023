@@ -1,2 +1,50 @@
 //*mixins*//
 @import "./mixin.scss";
+
+.burger__btn{
+   display: none;
+   visibility: hidden;
+   position: relative;
+   width: 32px;
+   height: 32px;
+   transition: background-color 0.2s linear;
+   span{
+      display: block;
+      height: 0.1rem;
+      width: 2.6rem;
+      background-color: #8b8b8b;
+      position: absolute;
+      left: 0.3rem;
+      top: calc(50% - 0.1rem);
+      transition: background-color 0.2s linear, width 0.1s linear, transform 0.2s linear;
+      &:first-child{
+         top: calc(25% - 0.1rem);
+      }
+      &:last-child{
+         top: calc(75% - 0.1rem);
+      }
+   }
+   &:hover{
+      cursor: pointer;
+      background-color: $gray;
+      span{
+         background-color: $black;
+      }
+   }
+   &--active{
+      span{
+         &:first-child{
+            width: 0; 
+         }
+         &:nth-child(2){
+            transform: rotate(45deg);
+         }
+         &:nth-child(3){
+            transform: rotate(-45deg);
+         }
+         &:last-child{
+            width: 0;
+         }
+      }
+   }
+}
