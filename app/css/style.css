@@ -265,10 +265,9 @@ body {
     box-sizing: border-box;
 }
 
-nav, footer, header, aside {
-    display: block;
-}
-
+/*nav,footer,header,aside{
+  display: block;
+}*/
 h1,
 h2,
 h3,
@@ -501,4 +500,55 @@ a:active {
 
 .burger__btn--active span:last-child {
     width: 0;
+}
+
+/*intro*/
+.intro {
+    border-top: 3px solid #f3ebdc;
+    width: 100%;
+    height: 90vh;
+}
+
+.intro__row {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.social__links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 3.4375%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
+}
+
+.social__links a {
+    display: block;
+    margin-bottom: 2.5rem;
+    text-decoration: none;
+}
+
+.social__links a:last-child {
+    margin-bottom: 0;
+}
+
+.social__links a i {
+    color: #171717;
+    font-size: 1.8rem;
+    transition: color 0.2s linear;
+}
+
+.social__links a:hover {
+    cursor: pointer;
+}
+
+.social__links a:hover i {
+    color: #000;
 }

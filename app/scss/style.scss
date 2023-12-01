@@ -36,9 +36,9 @@ body{
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-nav,footer,header,aside{
+/*nav,footer,header,aside{
   display: block;
-}
+}*/
 h1,
 h2,
 h3,
@@ -93,3 +93,5 @@ a {
 @import "block/header.scss";
 /*burger*/
 @import "block/burger.scss";
+/*intro*/
+@import "block/intro.scss";
