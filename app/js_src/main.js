@@ -5,5 +5,27 @@ jQuery(document).ready(function () {
   burger_btn.on("click", function(){
     $(this).toggleClass("burger__btn--active");
   });
-
+  /*Intro Slider*/
+  var introSlider = $("#introSlider");
+  introSlider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: true,
+    dots: false,
+    swipe: false,
+    touchMove: false,
+    focusOnSelect: false,
+    fade: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          fade: true,
+          swipe: true,
+          touchMove: true,
+        },
+      },
+    ],
+  });
 });
