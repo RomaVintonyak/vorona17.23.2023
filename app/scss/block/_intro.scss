@@ -60,6 +60,12 @@
             }
          }
       }
+      &--baner{
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         width: 650 / 1920 * 100%;
+      }
    }
 }
 .title__buttons{
